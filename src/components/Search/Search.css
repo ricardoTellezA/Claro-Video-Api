@@ -1,0 +1,21 @@
+
+.search{
+    margin-top: 20px;
+    color: #FFF;
+    text-align: center;
+}
+
+.search label{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.search input{
+   background-color: black;
+   border-radius: 50px;
+   border-color: #FFF;
+   color: #FFF;
+   padding: 5px;
+   width: 15%;
+   margin-left: 2rem;
+}

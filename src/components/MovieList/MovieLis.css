@@ -1,0 +1,9 @@
+.movies{
+    display: grid;
+    grid-template-columns: repeat(3, 0fr);
+    gap: 20px;
+    padding-top: 5rem;
+    max-width: 146rem;
+    margin: 0 auto;
+    width: 55%;
+}
