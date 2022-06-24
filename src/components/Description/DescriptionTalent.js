@@ -7,7 +7,7 @@ const DescriptionTalent = ({talent, title}) => {
     <div className="description-actors">
       {talent.talent !== undefined
         ? talent.talent.map((actor) => (
-            <a key={actor.id} className="description-name-actors">
+            <a href='#' key={actor.id} className="description-name-actors">
               {actor.fullname}
             </a>
           ))

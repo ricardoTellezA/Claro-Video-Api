@@ -37,6 +37,8 @@ const Description = () => {
     }
   }, [movieDescription]);
 
+  console.log(movieDescription);
+
 
   return (
     movieDescription && (
@@ -49,7 +51,7 @@ const Description = () => {
 
         <div className="description-content">
           <p className="description">{movieDescription.large_description}</p>
-          <p>
+          <p className="dates">
             {movieDescription.extendedcommon.media.publishyear}{" "}
             {movieDescription.extendedcommon.media.duration}s
             {movieDescription.extendedcommon.media.language.subbed ? (

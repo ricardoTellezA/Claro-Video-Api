@@ -7,3 +7,10 @@
     margin: 0 auto;
     width: 55%;
 }
+
+@media screen and (max-width: 1385px) {
+    .movies{
+        width: 66%;
+    }
+    
+}

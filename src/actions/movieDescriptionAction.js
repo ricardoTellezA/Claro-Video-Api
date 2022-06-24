@@ -5,8 +5,8 @@ import { DESCRIPCION_MOVIE } from "../types";
 export const movieDescriptionAction = () => {
   var URLactual = window.location;
   let urlAcortada = URLactual.href.split("/");
-  let result = urlAcortada[4];
-  // console.log(result);
+  let result = urlAcortada[5];
+ 
 
   return async (dispatch) => {
     try {

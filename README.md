@@ -1,70 +1,49 @@
-# Getting Started with Create React App
+# CLAROVIDEO TEST 
+Test para la vacante de front-end developer de ClaroVideo
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## DESCRIPCIÓN
+La prueba consiste en replicar dos vistas de la plataforma de claro video, consultando la una API para poder traer la lista de películas de la categoría de ciencia ficción y la descripción de cualquier película que sea seleccionada.
+## Requerimientos
+* Se deberá usar react y react-redux
+* Se tendrán que incluir pruebas unitarias
+* Se deberá subir en algún repositorio
+* Poner un readme con las instrucciones
+* Subir el proyecto en algún hosting
 
-## Available Scripts
+## INSTRUCCIONES PARA CORRER EL PROYECTO
+1. Clonar el repositorio de https://github.com/ricardoTellezA/Claro-Video-Api
+2. Instalar el administrador de paquetes de NodeJs
+3. Instalar React con: 
+    > npm intall
+4. Entrar a la carpeta de claro-video
+5. Correr con el siguiente comando:
+   >npm start
+## DEPENDECIAS UTILIZADAS
+En este caso para traer los datos de la API instale axios
+  >npm i axios
 
-In the project directory, you can run:
+Para las rutas, utilice: `react-router-dom`
+>npm install --save react-router-dom
 
-### `npm start`
+`redux`
+>npm i --save redux
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+`react redux` Permiten almacenar mi estado en un Store.
+>npm i react-redux
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+`redux thunk` es un middleware que le permite invocar creadores de acciones que devuelven una función en vez de un objeto de acción
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+>npm i --save redux-thunk
 
-### `npm run build`
+## URL DEL PROYECTO
+https://effortless-rolypoly-9c0dd7.netlify.app
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## PRUEBAS UNITARIAS
+Las pruebas unitarias se realizaron con Jest.
+>npm install --save-dev jest
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Tuve que instalar babel, ya que tuve problemas con la versión de nodeJs
+>npm install --save-dev babel-jest @babel/core @babel/preset-env 
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

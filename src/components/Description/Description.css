@@ -2,6 +2,9 @@
     display: flex;
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: top center;
+
+
 }
 .dark{
     position: absolute;
@@ -13,24 +16,65 @@
     opacity: 0.3;
 }
 .description-title {
+    font-size: 12px;
     color: #FFF;
     padding: 5% 0 5% 5%;
+    font-family: 'Outfit', sans-serif;
+    font-weight: bold;
 
 }
+.description-title img{
+    width: 30rem;
+}
+
+@media screen and (max-width: 768px) {
+    .description-title img{
+        width: 100%;
+        height: 10rem;
+    }
+}
+    
+
 
 .description-content {
     color: #FFF;
     padding: 5% 5% 5% 1%;
-    margin-top: 3.6rem;
+    margin-top: 2.9rem;
     width: 100%;
     text-align: justify;
 }
 
-.description {
+@media screen and (max-width: 768px) {
+    .description-content {
+        margin-top: 6.6rem;
+    }
+}
+    
 
-    width: 65%;
+
+.description {
+    text-align: justify;
+    width: 38%;;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 400;
+    
 
 }
+
+.dates{
+    font-family: 'Outfit', sans-serif;
+}
+
+@media screen and (max-width: 768px) {
+    .description {
+        width: 100%;
+    }
+    .description-content {
+        width: 100%;
+    }
+}
+    
+
 
 .description-content span {
     border: solid 1px #FFF;
@@ -41,38 +85,73 @@
     margin-left: 2rem;
 }
 
-.description-actors-container,
-.description-director {
+.description-actors-container
+{
     display: flex;
     width: 67%;
     text-align: justify;
 }
 
+@media screen and (max-width: 768px) {
+    .description-actors-container {
+        width: 100%;
+        margin-right: 1rem;
+    }
+}
+ 
 
-
-.description-title-actors,
-.description-title-director {
+.description-title-actors
+ {
     margin: -2px 1px 0 0;
-    width: 10%;
+    font-family: 'Outfit', sans-serif;
+    width: 16%;
     margin-right: 1px;
-    font-size: 1.2rem;
     font-weight: bold;
+    font-size: 17px;
+}
+@media screen and (max-width: 768px) {
+    .description-title-actors {
+        width: 20%;
+        margin-right: 1rem;
+    }
 }
 
+@media screen and (max-width: 1305px) {
+    .description-title-actors {
+        width: 20%;
+
+    }
+
+    .description{
+        width: 52%;
+    }
+}
+
+
+@media screen and (max-width: 1385px) {
+    .description-title-actors {
+        width: 20%;
+
+    }
+
+    .description{
+        width: 52%;
+    }
+}
 .description-name-actors {
+    text-align: left;
+    font-family: 'Outfit', sans-serif;
     margin-top: 1px;
     margin-bottom: -4px;
-    margin-left: 1rem;
+    
     color: #FFF;
-    font-size: 1rem;
-    font-weight: bold;
+    font-size: 14px;
+    /* font-weight: bold; */
 
 }
 
-.description-director{
-    margin-top: 1rem;
-}
-
-.description-name-director{
-    margin-top: 3px;
+@media screen and (max-width: 768px) {
+    .description-name-actors {
+        margin-left: 0;
+    }
 }

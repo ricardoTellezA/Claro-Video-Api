@@ -7,7 +7,7 @@ const Navigation = () => {
     <Router>
       <Routes>
         <Route path="/" element={<Movies />} />
-        <Route path="/movieDescription/:id" element={<MovieDescription />} />
+        <Route path="/movieDescription/:name/:id" element={<MovieDescription />} />
       </Routes>
     </Router>
   );

@@ -5,7 +5,7 @@ const initialState = {
   loading: false,
   error: null,
 };
-export default function(state = initialState, action)  {
+export default function description (state = initialState, action)  {
   switch (action.type) {
     case DESCRIPCION_MOVIE:
       return {
