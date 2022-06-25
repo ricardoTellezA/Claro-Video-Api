@@ -18,11 +18,8 @@ const MovieList = () => {
 
   // OBTENER LAS PELICULAS
   const movies = useSelector((state) => state.movies.movies);
-  if(!movies){
-    console.log("Cargando")
-  }
-
-  return (
+ 
+ return (
     <>
       <Search />
       <div className="movies">
@@ -30,7 +27,6 @@ const MovieList = () => {
           <h1>Hubo un error :c</h1>
         ) : (
           movies && movies.length > 1 ? (movies.map((movie) => (
-            // console.log(movie),
             <div>
               <Movies key={movie.id} movie={movie} />
             </div>

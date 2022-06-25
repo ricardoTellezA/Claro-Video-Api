@@ -1,6 +1,8 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 
 const DescriptionTalent = ({talent, title}) => {
+  
+
   return (
     <div className="description-actors-container">
     <p className="description-title-actors">{title}:</p>
