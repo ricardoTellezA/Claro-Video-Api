@@ -2,7 +2,6 @@ import {
   START_DOWNLOAD_MOVIES,
   FINISH_DOWNLOAD_MOVIES,
   ERROR_DOWNLOAD_MOVIES,
-  DESCRIPCION_MOVIE,
 } from "../types/index";
 
 const initialState = {
@@ -31,14 +30,6 @@ export default function moviesReducer(state = initialState, action) {
         ...state,
         loading: false,
         error: action.payload,
-      };
-
-    case DESCRIPCION_MOVIE:
-      return {
-        ...state,
-        movieDescription: action.payload,
-        loading: false,
-        error: null,
       };
 
     default:

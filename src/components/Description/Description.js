@@ -1,16 +1,13 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { movieDescriptionAction } from "../../actions/movieDescriptionAction";
+import DescriptionContent from "./DescriptionContent";
+import Talent from "./Talent";
 import "./Description.css";
-import DescriptionTalent from "./DescriptionTalent";
 
 const Description = () => {
   const dispatch = useDispatch();
   const [loadingMovie, setLoadingMovie] = useState(true);
-  const [actors, setActors] = useState([]);
-  const [director, setDirector] = useState([]);
-  const [producer, setProducer] = useState([]);
-  const [escritor, setEscritor] = useState([]);
 
   useEffect(() => {
     setTimeout(() => {
@@ -26,20 +23,6 @@ const Description = () => {
     (state) => state.description.movieDescription.common
   );
 
-  useEffect(() => {
-    if (movieDescription) {
-      movieDescription.extendedcommon.roles.role.forEach((actor) => {
-        if (actor.talents !== undefined) {
-      
-          if (actor.desc === "Actor") setActors(actor.talents);
-          if (actor.desc === "Director") setDirector(actor.talents);
-          if (actor.desc === "Productor") setProducer(actor.talents);
-          if (actor.desc === "Escritor") setEscritor(actor.talents);
-        }
-      });
-    }
-  }, [movieDescription]);
-  
   return (
     <>
       {loadingMovie ? (
@@ -64,29 +47,22 @@ const Description = () => {
             </div>
 
             <div className="description-content">
-              <p className="description">
-                {movieDescription.large_description}
-              </p>
-              <p className="dates">
-                {movieDescription.extendedcommon.media.publishyear}{" "}
-                {movieDescription.extendedcommon.media.duration}s
-                {movieDescription.extendedcommon.media.language.subbed ? (
-                  <span className="subtitled">Subtitled</span>
-                ) : null}
-                {movieDescription.extendedcommon.media.language.dubbed ? (
-                  <span className="dubbed">Dubbed</span>
-                ) : null}
-              </p>
+              <DescriptionContent movieDescription={movieDescription} />
 
-              <DescriptionTalent talent={actors} title="Actors" />
+              {movieDescription.extendedcommon.roles.role.map((talent) => (
+                <Talent key={talent.id} talent={talent} />
+              ))}
 
-              <DescriptionTalent talent={director} title="Director" />
-              {producer || producer.length ? (
-                <DescriptionTalent talent={producer} title="Productor" />
-              ) : null}
-              {escritor || escritor.length ? (
-                <DescriptionTalent talent={escritor} title="Escritor" />
-              ) : null}
+              <div className="gen">
+                <p className="description-title-actors generes-title">
+                  Generos:
+                </p>
+                {movieDescription.extendedcommon.genres.genre.map((genre) => (
+                  <a href="#" className="description-name-actors generes-desc">
+                    {genre.desc}
+                  </a>
+                ))}
+              </div>
             </div>
           </div>
         )
