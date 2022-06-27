@@ -37,7 +37,7 @@ Para las rutas, utilice: `react-router-dom`
 >npm i --save redux-thunk
 
 ## URL DEL PROYECTO
-https://effortless-rolypoly-9c0dd7.netlify.app
+https://famous-profiterole-30f519.netlify.app/
 
 ## PRUEBAS UNITARIAS
 Las pruebas unitarias se realizaron con Jest.
