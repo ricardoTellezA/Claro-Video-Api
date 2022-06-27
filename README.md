@@ -36,9 +36,6 @@ Para las rutas, utilice: `react-router-dom`
 
 >npm i --save redux-thunk
 
-## URL DEL PROYECTO
-https://famous-profiterole-30f519.netlify.app/
-
 ## PRUEBAS UNITARIAS
 Las pruebas unitarias se realizaron con Jest.
 >npm install --save-dev jest
